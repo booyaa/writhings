@@ -7,4 +7,5 @@ ignore:
   - .git/*
   - build/*
   - README.md
+  - TODO.md
 rss: rss.xml
