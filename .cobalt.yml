@@ -1,0 +1,10 @@
+name: writhings
+description: a writing notepad
+link: http://writhings.booyaa.wtf
+source: "."
+dest: "build"
+ignore:
+  - .git/*
+  - build/*
+  - README.md
+rss: rss.xml
