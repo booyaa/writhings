@@ -5,12 +5,66 @@
         
           <title>missing you</title>
         
+        <style>
+/* no grid support? */
+.sidebar {
+  float: left;
+  width: 19.1489%;
+}
+
+.content {
+  float: right;
+  width: 79.7872%;
+}
+
+/* make a grid */
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+}
+
+.wrapper > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+.header, .footer {
+  grid-column: 1 / -1;
+  /* needed for the floated layout */
+  clear: both;
+}
+
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+/* custom */
+a {
+  color: hotpink;
+  text-decoration: none;
+}
+        </style>
     </head>
     <body>
-    <div>
-      
-        <div>
-  <h2>missing you</h2>
+    <div class="wrapper">
+      <header class="header">writings</header>
+      <aside class="sidebar">a writing notebook</aside>
+      <article class="content">
+          
+              <h2>missing you</h2>
   <p>
     <p>you were the heart of so many</p>
 <p>broken they were when you departed so briefly</p>
@@ -18,9 +72,10 @@
 <p>then perhaps they will be complete</p>
 
   </p>
-</div>
 
-      
+          
+      </article>
+      <footer class="footer">Copyright &copy; 2017 Mark Sta Ana. All Rights Reserved.</footer>
     </div>
   </body>
 </html>
