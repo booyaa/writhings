@@ -1,7 +1,10 @@
 extends: default.liquid
 ---
-    {% for post in posts %}
-      <div>
-        <h4><a href="{{post.path}}">{{ post.title }}</a></h4>
-      </div>
-    {% endfor %}
+Warning: these poems don't rhyme, are poor pastiches and predictable cliches. For real
+poetry, please see <a href="https://en.wikipedia.org/wiki/John_Hegley">John Hegley</a>.
+
+{% for post in posts %}
+  <ul>
+    <li><a href="{{post.path}}">{{ post.title }}</a></li>
+  </ul>
+{% endfor %}
