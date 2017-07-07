@@ -6,10 +6,7 @@ build:
 
 publish: build
 	cobalt import --branch master
-	git checkout master
-	git push -u origin master
-	git checkout source
-
+		
 serve:
 	cobalt serve
 
